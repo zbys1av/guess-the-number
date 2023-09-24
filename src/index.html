@@ -8,15 +8,23 @@
   <body>
 
     <section class="main">
-      <div class="main__text">
-        <span class="main__number" id="main__number">number</span>
-        <span class="main__question" id="main__question">question</span>
+      <div class="container">
+        <div class="main__box">
+          <div class="main__text">
+            <span class="main__number" id="main__number">number</span>
+            <span class="main__question" id="main__question">question</span>
+          </div>
+          <div class="main__buttons">
+            <div class="main__choose">
+              <span class="higher btn" id="higher">higher</span>
+              <span class="lower btn" id="lower">lower</span>
+            </div>
+            <button class="correct" id="correct">That is my number</button>
+          </div>
+          <!-- <span class="btn" id="btn">confirm</span> -->
+          <span class="main__correct-answer" id="correct-answer"></span>
+        </div>
       </div>
-
-      <button class="correct" id="correct">That is my number</button>
-      <input type="text" class="user-input" id="user-input" value="">
-      <span class="btn" id="btn">confirm</span>
-      <span class="correct-answer" id="correct-answer"></span>
     </section>
 
   </body>

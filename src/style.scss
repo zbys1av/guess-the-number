@@ -1,1 +1,103 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700&display=swap');
+
+body{
+    background: rgb(39, 39, 39);
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 800px;
+    // background: red;
+}
+
+.main{
+    display: flex;
+    color: rgb(177, 175, 164);
+
+    &__box{
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+        width: 400px;
+        height: 200px;
+        // background: gray;
+        padding: 100px;
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    &__question{
+        font-size: 19px;
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+    }
+
+    .correct{
+        margin: auto;
+        text-transform: uppercase;
+        width: 200px;
+        padding: 10px;
+        font-weight: bold;
+        color: rgb(177, 175, 164);
+        background: rgba(223, 189, 38, 0.541);
+        border: 2px solid rgb(212, 177, 63);
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover{
+            color: rgb(214, 187, 35);
+            background: rgba(196, 190, 164, 0.541);
+            border: 2px solid rgba(212, 177, 63, 0.616);
+            transition: 0.3s;
+        }
+    }
+
+    &__choose{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .btn{
+        text-transform: uppercase;
+        font-weight: bold;
+        width: 100px;
+        text-align: center;
+        border: 2px solid rgb(177, 175, 164);
+        border-radius: 3px;
+        padding: 5px;
+        color: rgb(39, 39, 39);
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover{
+            color: rgb(230, 225, 214);
+            background: rgba(199, 179, 156, 0.658);
+            transition: 0.3s;
+            border: 2px solid rgb(230, 225, 214)
+        }
+    }
+
+    .higher{
+        background: rgb(219, 171, 109);
+    }
+
+    .lower{
+        background: rgb(115, 143, 180);
+    }
+
+    &__correct-answer{
+        text-align: center;
+        font-size: 35px;
+    }
+}
