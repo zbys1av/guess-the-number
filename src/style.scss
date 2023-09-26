@@ -7,22 +7,31 @@ body{
 }
 
 .container{
-    width: 800px;
-    // background: red;
+    background: red;
 }
 
 .main{
-    display: flex;
     color: rgb(177, 175, 164);
 
+    &__attempts{
+        position: absolute;
+        right: 0;
+        margin: 13px;
+        font-size: 13px;
+    }
+
     &__box{
+        user-select: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        
         display: flex;
         gap: 50px;
         flex-direction: column;
         width: 400px;
-        height: 200px;
-        // background: gray;
-        padding: 100px;
     }
 
     &__text{
@@ -48,18 +57,17 @@ body{
         width: 200px;
         padding: 10px;
         font-weight: bold;
-        color: rgb(177, 175, 164);
-        background: rgba(223, 189, 38, 0.541);
-        border: 2px solid rgb(212, 177, 63);
-        border-radius: 3px;
+        color: rgb(39, 39, 39);
+        background: rgb(101, 92, 45);
+        border: 2px solid rgb(39, 39, 39);
+        border-radius: 5px;
         cursor: pointer;
-        transition: 0.3s;
+        transition: ease-in 0.5s;
 
         &:hover{
             color: rgb(214, 187, 35);
-            background: rgba(196, 190, 164, 0.541);
-            border: 2px solid rgba(212, 177, 63, 0.616);
-            transition: 0.3s;
+            background: rgba(194, 185, 134, 0.153);
+            transition: ease-out 0.5s;
         }
     }
 
@@ -73,31 +81,46 @@ body{
         font-weight: bold;
         width: 100px;
         text-align: center;
-        border: 2px solid rgb(177, 175, 164);
-        border-radius: 3px;
+        border-radius: 5px;
         padding: 5px;
-        color: rgb(39, 39, 39);
+        background-color: rgb(60, 60, 60);
+        color: rgb(230, 225, 214);
+        border: 2px solid rgb(39, 39, 39);
         cursor: pointer;
         transition: 0.5s;
 
         &:hover{
-            color: rgb(230, 225, 214);
-            background: rgba(199, 179, 156, 0.658);
-            transition: 0.3s;
-            border: 2px solid rgb(230, 225, 214)
+            background: rgba(196, 196, 196, 0.386);
+            color: rgb(39, 39, 39);
         }
-    }
 
-    .higher{
-        background: rgb(219, 171, 109);
-    }
-
-    .lower{
-        background: rgb(115, 143, 180);
+        &--restart{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: absolute;
+            padding: 5px;
+            width: 20px;
+            height: 20px;
+            margin: 13px;
+            border-radius: 20px;
+        }
     }
 
     &__correct-answer{
         text-align: center;
         font-size: 35px;
+        transition: 0.7s;
+    }
+
+    .visible-js{
+        opacity: 100%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .hidden-js{
+        opacity: 0%;
+        transition: 0.5s ease-in-out;
     }
 }
